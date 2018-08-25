@@ -1,10 +1,10 @@
 # NodeJS
 
-# Descripción
+## Descripción
 
 Este repositorio contiene todos los ejercicios del curso "Node: de Cero a Experto" que se encuentra en la plataforma Udemy. 
 
-# Instalación
+## Instalación
 
 Las herramientas utilizadas son las siguientes:
 
@@ -24,3 +24,7 @@ Para la instalación de NodeJS en Linux:
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt install nodejs -y
 ```
+
+## Ejercicios
+
+1. Hola Mundo
