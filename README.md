@@ -25,6 +25,16 @@ $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt install nodejs -y
 ```
 
+## Otras herramientas
+
+### Nodemon
+
+Mantiene levantado el servicio mientras se realizan cambios en los programas, volviendo a ejecutar el código después de guardados los cambios.
+
+```sh
+$ sudo npm install -g nodemon
+```
+
 ## Ejercicios
 
 1. Hola Mundo
