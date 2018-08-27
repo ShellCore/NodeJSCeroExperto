@@ -37,6 +37,17 @@ function saludo(nombre) {
 console.log(saludo('Fernando'));
 
 // Función de flecha con solo 1 argumento
-let saludof = nombre => `Hola ${nombre}`;
+let saludof = (nombre) => `Hola ${nombre}`;
 
 console.log(saludof('Fernando'));
+
+let deadpool = {
+    nombre: 'Wade',
+    apellido: 'Winston',
+    poder: 'Regeneración',
+    getNombre() {
+        return `${this.nombre} ${this.apellido} - poder: ${this.poder}`;
+    }
+}
+
+console.log(deadpool.getNombre());
