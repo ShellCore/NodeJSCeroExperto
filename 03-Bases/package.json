@@ -1,0 +1,14 @@
+{
+  "name": "03-bases",
+  "version": "1.0.0",
+  "description": "Esta es una aplicación de línea de comando",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cesar Morales",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^12.0.1"
+  }
+}

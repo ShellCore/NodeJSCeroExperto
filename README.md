@@ -37,9 +37,11 @@ $ sudo npm install -g nodemon
 
 ## Ejercicios
 1. Hola Mundo
-2. Diferencia entre **Var** y **Let**
-3. Template literales
-4. Destructuración de objetos
-5. Funciones de flecha
-6. Callbacks
-7. Promesas
+2. Fundamentos
+	a. Diferencia entre **Var** y **Let**
+	b. Template literales
+	c. Destructuración de objetos
+	d. Funciones de flecha
+	e. Callbacks
+	f. Promesas
+3. Bases
