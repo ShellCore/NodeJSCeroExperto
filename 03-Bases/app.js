@@ -1,11 +1,7 @@
 const argv = require('./config/yargs').argv;
+const colors = require('colors');
 const { crearArchivo } = require('./multiplicar/multiplicar');
-
-let listarTabla = (base, limite) => {
-    for (var i = 1; i <= limite; i++) {
-        console.log(`${base} * ${i} = ${base * i}`);
-    }
-}
+const { listarTabla } = require('./multiplicar/multiplicar');
 
 let comando = argv._[0];
 
@@ -15,7 +11,7 @@ switch (comando) {
         break;
     case 'crear':
         crearArchivo(argv.base, argv.limite)
-            .then(archivo => console.log(`Archivo creado: ${archivo}`))
+            .then(archivo => console.log('Archivo creado', `${archivo}`.yellow))
             .catch(e => console.log(e));
         break;
     default:
