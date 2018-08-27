@@ -40,3 +40,4 @@ $ sudo npm install -g nodemon
 2. Diferencia entre **Var** y **Let**
 3. Template literales
 4. Destructuración de objetos
+5. Funciones de flecha
