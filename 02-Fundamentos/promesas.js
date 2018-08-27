@@ -52,9 +52,16 @@ let getSalario = (empleado) => {
     });
 }
 
-getEmpleado(2).then((empleado) => {
-    // console.log('Empleado de la BD', empleado);
-    getSalario(empleado).then((result) => {
-        console.log(`El salario de ${result.nombre} es de $${result.salario}`);
-    }, (err) => console.log(err));
-}, (err) => console.log(err));
+// getEmpleado(2).then((empleado) => {
+//     getSalario(empleado).then((result) => {
+//         console.log(`El salario de ${result.nombre} es de $${result.salario}`);
+//     }, (err) => console.log(err));
+// }, (err) => console.log(err));
+
+getEmpleado(3).then((empleado) => {
+    return getSalario(empleado);
+}).then((res) => {
+    console.log(`El salario de ${res.nombre} es de $${res.salario}`);
+}).catch(err => {
+    console.log(err);
+});
