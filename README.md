@@ -46,6 +46,7 @@ $ sudo npm install -g nodemon
 	f. Promesas
 3. Bases
 4. Lista de tareas por hacer
+5. Clima del mundo
 
 ## Notas
 
@@ -57,3 +58,4 @@ $ npm install
 
 3. Bases
 4. Lista de tareas por hacer
+5. Clima del mundo
