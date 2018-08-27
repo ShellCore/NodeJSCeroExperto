@@ -42,3 +42,4 @@ $ sudo npm install -g nodemon
 4. Destructuración de objetos
 5. Funciones de flecha
 6. Callbacks
+7. Problemas
