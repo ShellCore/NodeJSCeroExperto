@@ -45,3 +45,11 @@ $ sudo npm install -g nodemon
 	e. Callbacks
 	f. Promesas
 3. Bases
+
+## Notas
+
+Para ejercicio 3, ejecutar el siguiente comando, para que las librerías de node se descarguen
+
+```sh
+$ npm install
+```
