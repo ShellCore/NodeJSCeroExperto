@@ -41,3 +41,4 @@ $ sudo npm install -g nodemon
 3. Template literales
 4. Destructuración de objetos
 5. Funciones de flecha
+6. Callbacks
