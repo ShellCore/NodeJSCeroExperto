@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // Parse application/json
 require('./config/config');
 
 app.get('/usuario', (req, res) => {
-    res.json('get usuario');
+    res.json('get usuario local!');
 });
 
 app.post('/usuario', (req, res) => {
