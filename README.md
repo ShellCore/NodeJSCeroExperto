@@ -35,6 +35,11 @@ Mantiene levantado el servicio mientras se realizan cambios en los programas, vo
 $ sudo npm install -g nodemon
 ```
 
+### Servicios
+
+- [Open Wheather Map](https://openweathermap.org/): Servicio REST para la consulta del clima
+- [Google Cloud Platorm](https://console.cloud.google.com/google/maps-apis/overview): Servicios de ubicación de Google
+
 ## Ejercicios
 1. Hola Mundo
 2. Fundamentos

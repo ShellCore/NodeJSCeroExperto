@@ -1,26 +1,20 @@
-const axios = require('axios');
+const argv = require('./config/yargs').argv;
+const lugar = require('./lugar/lugar');
+const clima = require('./clima/clima');
 
-const argv = require('yargs').options({
-    direccion: {
-        alias: 'd',
-        desc: 'Dirección de la ciudad para obtener el clima',
-        demand: true
+let getInfo = async(direccion) => {
+
+    try {
+
+        let coors = await lugar.getLugarLatLng(direccion);
+        let temp = await clima.getClima(coors.lat, coors.lng);
+
+        return `El clima en ${coors.direccion} es de ${temp}°C`;
+    } catch (e) {
+        return `No se pudo determinar el clima en ${direccion}`;
     }
-}).argv;
+}
 
-console.log(argv.direccion);
-
-let encodedUrl = encodeURI(argv.direccion);
-
-axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedUrl}&key=AIzaSyApGtY8Fns6r0M4COEhOV8um0anAQtRmjU`)
-    .then(resp => {
-
-        let location = resp.data.results[0];
-        let coords = location.geometry.location;
-
-        console.log("Dirección:", location.formatted_address);
-        console.log("Lat:", coords.lat);
-        console.log("Lon:", coords.lng);
-
-    })
-    .catch(e => console.log("Error", e));
+getInfo(argv.direccion)
+    .then(mensaje => console.log(mensaje))
+    .catch(e => console.log(e));
