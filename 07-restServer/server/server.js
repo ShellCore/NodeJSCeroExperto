@@ -7,35 +7,17 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // Parse application/json
 
+app.use(require('./routes/usuario'));
+
+// Mongoose (MongoDB connection)
+const mongoose = require('mongoose');
+
 require('./config/config');
 
-app.get('/usuario', (req, res) => {
-    res.json('get usuario local!');
-});
+mongoose.connect('mongodb://localhost:27017/cafe', (err, res) => {
+    if (err) throw err;
 
-app.post('/usuario', (req, res) => {
-    let persona = req.body;
-
-    if (persona.nombre === undefined) {
-        res.status(400)
-            .json({
-                ok: false,
-                mensaje: 'El nombre es necesario'
-            });
-    } else {
-        res.json({
-            persona
-        });
-    }
-});
-
-app.put('/usuario/:id', (req, res) => {
-    let id = req.params.id;
-    res.json({ id });
-});
-
-app.delete('/usuario', (req, res) => {
-    res.json('delete usuario');
+    console.log('Base de datos ONLINE');
 });
 
 app.listen(process.env.PORT, () => {
