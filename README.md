@@ -64,7 +64,7 @@ $ heroku -v
 3. Bases
 4. Lista de tareas por hacer
 5. Clima del mundo
-6. Web Server
+6. Web Server ([link al deploy en Heroku](https://dashboard.heroku.com/apps/shellcore-webpage))
 
 ## Notas
 
