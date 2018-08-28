@@ -35,10 +35,22 @@ Mantiene levantado el servicio mientras se realizan cambios en los programas, vo
 $ sudo npm install -g nodemon
 ```
 
+### Heroku
+
+Servicio web para poder subor proyectos de NodeJS (hasta 5 simultáneos gratis).
+
+```sh
+$ sudo apt install snapd
+$ sudo snap install --classic heroku
+# Nota: requiere reiniciar el equipo, para poder verificar que en efecto se instaló
+$ heroku -v
+```
+
 ### Servicios
 
 - [Open Wheather Map](https://openweathermap.org/): Servicio REST para la consulta del clima
 - [Google Cloud Platorm](https://console.cloud.google.com/google/maps-apis/overview): Servicios de ubicación de Google
+- [Heroku](https://www.heroku.com/): Servicio para desplegar proyectos NodeJS
 
 ## Ejercicios
 1. Hola Mundo
@@ -52,6 +64,7 @@ $ sudo npm install -g nodemon
 3. Bases
 4. Lista de tareas por hacer
 5. Clima del mundo
+6. Web Server
 
 ## Notas
 
@@ -63,4 +76,17 @@ $ npm install
 
 3. Bases
 4. Lista de tareas por hacer
-5. Clima del mundo
+5. Clima del 
+6. Web Server
+
+Para ejecutar el ejercicio 6, por la configuración en los scripts de package.json, ejecutar la siguiente línea
+
+```sh
+$ npm start
+```
+
+Para ejecutar con nodemon el ejercicio 6, por la configuración en los scripts de package.json, ejecutar la siguiente línea
+
+```sh
+$ npm run nodemon
+```
