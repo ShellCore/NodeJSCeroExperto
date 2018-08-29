@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // Parse application/json
 
-app.use(require('./routes/usuario'));
+// Configuración global de rutas
+app.use(require('./routes/index'));
 
 // Mongoose (MongoDB connection)
 const mongoose = require('mongoose');

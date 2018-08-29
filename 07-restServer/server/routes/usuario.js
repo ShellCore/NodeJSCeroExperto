@@ -9,8 +9,15 @@ const bcrypt = require('bcrypt');
 const _ = require('underscore');
 
 const Usuario = require('../models/usuario');
+const { verificaToken, verificaRolAdmin } = require('../middlewares/authentication');
 
-app.get('/usuario', (req, res) => {
+app.get('/usuario', [verificaToken, verificaRolAdmin], (req, res) => {
+
+    return res.json({
+        usuario: req.usuario,
+        name: req.usuario.name,
+        email: req.usuario.email
+    });
 
     let from = req.query.from || 0;
     from = Number(from);
@@ -42,7 +49,7 @@ app.get('/usuario', (req, res) => {
         });
 });
 
-app.post('/usuario', (req, res) => {
+app.post('/usuario', [verificaToken, verificaRolAdmin], (req, res) => {
     let body = req.body;
 
     let usuario = new Usuario({
@@ -68,7 +75,7 @@ app.post('/usuario', (req, res) => {
     });
 });
 
-app.put('/usuario/:id', (req, res) => {
+app.put('/usuario/:id', [verificaToken, verificaRolAdmin], (req, res) => {
     let id = req.params.id;
 
     let validEditableFields = [
@@ -128,7 +135,7 @@ app.put('/usuario/:id', (req, res) => {
 //     });
 // });
 
-app.delete('/usuario/:id', function(req, res) {
+app.delete('/usuario/:id', [verificaToken, verificaRolAdmin], function(req, res) {
     let id = req.params.id;
 
     let cambiaEstado = {
