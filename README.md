@@ -78,6 +78,7 @@ Aplicación para la manipulación de la base de datos de MongoDB. ([Link a direc
 - [Open Wheather Map](https://openweathermap.org/): Servicio REST para la consulta del clima
 - [Google Cloud Platorm](https://console.cloud.google.com/google/maps-apis/overview): Servicios de ubicación de Google
 - [Heroku](https://www.heroku.com/): Servicio para desplegar proyectos NodeJS
+- [mLab](https://www.mlab.com): Servicio MongoDB en la nube (gratuito 500 MB)
 
 ## Ejercicios
 1. Hola Mundo

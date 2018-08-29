@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 
 require('./config/config');
 
-mongoose.connect('mongodb://localhost:27017/cafe', (err, res) => {
+mongoose.connect(process.env.DB_URL, (err, res) => {
     if (err) throw err;
 
     console.log('Base de datos ONLINE');
