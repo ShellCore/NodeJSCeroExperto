@@ -13,6 +13,11 @@ app.use(require('./routes/index'));
 // Mongoose (MongoDB connection)
 const mongoose = require('mongoose');
 
+// Habilitar la carpeta public
+const path = require('path');
+app.use(express.static(path.resolve(__dirname, '../public')));
+
+
 require('./config/config');
 
 mongoose.connect(process.env.DB_URL, (err, res) => {
