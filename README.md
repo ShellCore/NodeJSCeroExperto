@@ -94,6 +94,7 @@ Aplicación para la manipulación de la base de datos de MongoDB. ([Link a direc
 5. Clima del mundo
 6. Web Server ([link al deploy en Heroku](https://dashboard.heroku.com/apps/shellcore-webpage))
 7. Rest Server
+8. Sockets
 
 ## Notas
 
