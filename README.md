@@ -73,6 +73,13 @@ $ cat /var/log/mongodb/mongod.log
 
 Aplicación para la manipulación de la base de datos de MongoDB. ([Link a dirección de descarga](https://robomongo.org/))
 
+### Typescript
+
+```sh
+$ sudo npm install -g typescript
+
+```
+
 ### Servicios
 
 - [Open Wheather Map](https://openweathermap.org/): Servicio REST para la consulta del clima
@@ -96,6 +103,7 @@ Aplicación para la manipulación de la base de datos de MongoDB. ([Link a direc
 7. Rest Server
 8. Sockets
 9. Chat
+10. TypeScript y MySQL
 
 ## Notas
 
@@ -121,4 +129,16 @@ Para ejecutar con nodemon el ejercicio 6, por la configuración en los scripts d
 
 ```sh
 $ npm run nodemon
+```
+
+Para inicializar una aplicación de node
+
+```sh
+$ npm init
+```
+
+Para inicializar una aplicación con Typescript
+
+```sh
+$ tsc --init
 ```
